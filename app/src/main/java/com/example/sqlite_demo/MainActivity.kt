@@ -67,12 +67,12 @@ class MainActivity : AppCompatActivity() {
         val author = edAuthor.text.toString()
 
         if(name.isEmpty() || author.isEmpty()){
-            Toast.makeText(this, "Please enter erquired field", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter required field", Toast.LENGTH_SHORT).show()
         } else{
             val book = BookModel(name= name, author = author)
             val status = sqLiteHelper.insertStudent(book)
             if(status > -1){
-                Toast.makeText(this, "Student Added...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Book Added...", Toast.LENGTH_SHORT).show()
                 clearEditText()
 
             }else{
